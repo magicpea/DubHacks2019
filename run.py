@@ -9,11 +9,11 @@ from audio2speaker import play_audio
 from voice_detection import sample_recognize
 
 filename = "output"
-outputlang = "es"
-langs = ['en', 'es', 'fr']
+outputlang = "en"
+langs = ['es', 'en', 'fr']
 
 if __name__ == "__main__":
-    #record_flac(filename + ".wav")
+    record_flac(filename + ".wav")
     detected_lang = sample_recognize(filename + ".flac", langs)[0]
     print(detected_lang)
     text = speech2text(filename + ".flac", detected_lang)[0]
