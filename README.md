@@ -1,5 +1,9 @@
 # DubHacks2019
 
+## Requirements:
+- Mac OS (Untested for any other operating system)
+- Python 3.X
+
 ## Setup
 
 ### Install the python dependencies
