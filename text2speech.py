@@ -1,12 +1,12 @@
 from google.cloud import texttospeech
 
-def text2speech(text):
+def text2speech(text, outputlang):
         client = texttospeech.TextToSpeechClient()
 
         input_text = texttospeech.types.SynthesisInput(text=text)
 
         voice = texttospeech.types.VoiceSelectionParams(
-            language_code = 'es-MX',
+            language_code = outputlang,
             ssml_gender = texttospeech.enums.SsmlVoiceGender.FEMALE)
 
         audio_config = texttospeech.types.AudioConfig(

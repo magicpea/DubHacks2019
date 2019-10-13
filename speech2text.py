@@ -9,7 +9,7 @@ import io
 # Instantiates a client
 client = speech.SpeechClient()
 
-def speech2text(input_file):
+def speech2text(input_file, lang):
     # Loads the audio into memory
     with io.open(input_file, 'rb') as audio_file:
         content = audio_file.read()
@@ -18,7 +18,7 @@ def speech2text(input_file):
     config = types.RecognitionConfig(
         encoding=enums.RecognitionConfig.AudioEncoding.FLAC,
         sample_rate_hertz=16000,
-        language_code='en-US')
+        language_code=lang)
 
     # Detects speech in the audio file
     response = client.recognize(config, audio)

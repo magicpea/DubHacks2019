@@ -1,19 +1,24 @@
 import os
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/briansanchez/Desktop/DubHacks2019/Translate Project-49289bb13c3a.json'
 
 from record_audio import record_flac
 from speech2text import speech2text
 from txttranslate import translatetxt
 from text2speech import text2speech
 from audio2speaker import play_audio
+from voice_detection import sample_recognize
 
 filename = "output"
+outputlang = "es"
+langs = ['en', 'es', 'fr']
 
 if __name__ == "__main__":
-    record_flac(filename + ".wav")
-    text = speech2text(filename + ".flac")[0]
-    _, translated_text = translatetxt(text, 'es')
-    text2speech(translated_text)
+    #record_flac(filename + ".wav")
+    detected_lang = sample_recognize(filename + ".flac", langs)[0]
+    print(detected_lang)
+    text = speech2text(filename + ".flac", detected_lang)[0]
+    _, translated_text = translatetxt(text, outputlang)
+    text2speech(translated_text, outputlang)
     play_audio(filename + ".mp3")
 
     
