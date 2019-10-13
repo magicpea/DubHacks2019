@@ -1,5 +1,5 @@
 import os
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/briansanchez/Desktop/DubHacks2019/Translate Project-49289bb13c3a.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'Path to Google Credentials .json file'
 
 from record_audio import record_flac
 from speech2text import speech2text
