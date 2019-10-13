@@ -4,7 +4,7 @@ from pydub.playback import play
 
 # Takes a .mp3 file as a parameter, converts it to a
 # .wav file, and plays the audio from that file
-def playAudio(fileName):
+def play_audio(fileName):
 
     # Takes an audio segment from the given mp3 file
     song = AudioSegment.from_mp3(fileName)

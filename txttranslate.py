@@ -1,5 +1,8 @@
 # Imports the Google Cloud client library
 from google.cloud import translate
+import os
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
 
 # Instantiates a client
 translate_client = translate.Client()
@@ -16,14 +19,13 @@ def printtranslation():
     print('Translation: {}'.format(translation))
 
 
-text, translation = translatetxt('Hello, World!', 'el')
-printtranslation()
+#text, translation = translatetxt('Hello, World!', 'el')
+#printtranslation()
 
 def savetext(translation):
     translatedtext = open('translatedtext.txt','w')
     translatedtext.write(translation)
 
-savetext(translation)
 ''' 
 Language Targets:
 Arabic	Standard	ar	
