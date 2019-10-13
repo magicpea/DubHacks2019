@@ -1,5 +1,5 @@
 import sounddevice as sd
-import noisereduce as nr
+#import noisereduce as nr
 from scipy.io.wavfile import write
 from os.path import splitext
 from pydub import AudioSegment
