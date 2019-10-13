@@ -20,8 +20,6 @@ def playAudio(fileName):
     # either computer or device connected 
     play(song)
 
-# Test output with a given parameter
-playAudio("circles.mp3")
 
 
 
