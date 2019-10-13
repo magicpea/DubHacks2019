@@ -1,8 +1,5 @@
 # Imports the Google Cloud client library
 from google.cloud import translate
-import os
-
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
 
 # Instantiates a client
 translate_client = translate.Client()

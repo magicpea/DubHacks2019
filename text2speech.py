@@ -1,10 +1,6 @@
 from google.cloud import texttospeech
-import os
 
 def text2speech(text):
-        
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
-
         client = texttospeech.TextToSpeechClient()
 
         input_text = texttospeech.types.SynthesisInput(text=text)

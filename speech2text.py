@@ -3,12 +3,8 @@ from google.cloud.speech import enums
 from google.cloud.speech import types
 
 import io
-import os
 
 # Imports the Google Cloud client library
-
-
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
 
 # Instantiates a client
 client = speech.SpeechClient()

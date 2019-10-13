@@ -1,3 +1,6 @@
+import os
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'DubHacks2019-d3f55594770d.json'
+
 from record_audio import record_flac
 from speech2text import speech2text
 from txttranslate import translatetxt
