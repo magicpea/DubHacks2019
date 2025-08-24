@@ -1,4 +1,6 @@
-# DubHacks2019
+# BreakingBarriers 
+
+*[Submission for DubHacks2019](https://devpost.com/software/dubhacks2019-goeb93)*
 
 ## Requirements:
 - Mac OS (Untested for any other operating system)
